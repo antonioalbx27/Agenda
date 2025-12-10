@@ -12,10 +12,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import org.izv.aa.agenda.model.data.Contact
 
 
 @Composable
-fun ContactItem(navController: NavController) {
+fun ContactItem(contact: Contact, navController: NavController) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -30,7 +31,8 @@ fun ContactItem(navController: NavController) {
                 .fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(text = "Marina chismosa" )
+            Text(text = contact.name )
+            Text(text = contact.phone )
             /**Button(
                 onClick = { },
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)

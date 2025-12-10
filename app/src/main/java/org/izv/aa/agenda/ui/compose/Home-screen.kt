@@ -45,8 +45,8 @@ fun HomeScreen(
                     .weight(1f)
                     .fillMaxWidth()
             ) {
-                items(items = contacts.value) { _ ->
-                    ContactItem(navController)
+                items(items = contacts.value) { contact ->
+                    ContactItem(contact, navController)
                 }
             }
         }
@@ -57,7 +57,7 @@ fun HomeScreen(
         Button(onClick = { navController.navigate("edit-contact") }) {
             Text("Edit Contact")
         }
-        Button(onClick = { navController.navigate("ContactItem") }) {
+        Button(onClick = { navController.navigate("jContactItem") }) {
             Text("Item")
         }
     }

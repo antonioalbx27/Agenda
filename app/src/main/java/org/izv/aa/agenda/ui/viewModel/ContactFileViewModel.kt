@@ -22,7 +22,6 @@ class ContactFileViewModel(private val repository: ContactFileRepository): ViewM
 
     fun addContact(contact: Contact){
         viewModelScope.launch {
-            val contact = Contact(id = 0, name = "", phone = "")
             repository.writeContact(contact)
             readContacts()
         }

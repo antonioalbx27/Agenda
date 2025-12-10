@@ -48,9 +48,7 @@ import org.izv.aa.agenda.ui.viewModel.ContactFileViewModel
             composable("Edit-contact") {
                 EditContact(navController,  viewModel, innerPadding)
             }
-            composable("ContactItem") {
-                ContactItem(navController)
-            }
+
 
         }
     }
